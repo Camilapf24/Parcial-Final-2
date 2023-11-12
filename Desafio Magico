@@ -1,0 +1,42 @@
+def calcular_puntos_quidditch(eventos):
+  puntos = 0
+  for evento in eventos:
+    if evento == "goal":
+       puntos += 10
+    elif evento == "snitch":
+       puntos += 150
+    elif evento == "foul":
+      puntos -= 30
+
+  return puntos
+  
+#Lista de eventos del juego de quidditch
+quidditch_events = ["goal", "snitch", "foul", "snitch", "goal"]
+
+#Calcular los puntos finales
+puntos_finales = calcular_puntos_quidditch(quidditch_events)
+
+#Mostrar el resultado}
+print(f"Puntos finales de Harry Potter en el juego de quidditch. {puntos_finales} puntos")
+
+quidditch_events = ["goal","snitch", "goal","foul","snitch","goal"]
+
+gryffindor_scorre = 0
+slythrin_score = 0
+
+for evento in quidditch_events:
+  if evento == "goal":
+    gryffindor_scorre += 10
+
+  elif evento == "snitch":
+    slythrin_score += 150
+
+  elif evento == "foul":
+    gryffindor_score -= 30
+
+    #Imprimir los puntajes finales
+    print(f"Puntaje final de Gryffindor: {gryffindor_score} puntos")
+    print(f"Puntaje final de Slytherin:{alytherin_score} puntos")
+
+    #Comparar puntajes y 
+
