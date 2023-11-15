@@ -1,0 +1,54 @@
+contar = 0
+categoria_1 = 0
+categoria_2 = 0
+categoria_3 = 0
+categoria_4 = 0
+animal = input("¿Quieres comenzar a contar animales? (si/no)")
+while animal.lower() == "si":
+  contar += 1
+  #print(contar)
+  edad = int(input("¿Que edad tiene el animal?"))
+  animal = input("¿Quieres contar mas animales? (si/no)")
+  if edad < 2:
+  categoria_1 += 1
+  elif edad >= 2 and edad < 5:
+  categoria_2 += 1
+  elif edad >= 5 and edad < 10:
+  categoria_3 += 1
+  elif edad >= 10:
+  categoria_4 += 1
+  else:
+  print("Esta categoria no existe")
+  
+porcentaje_1 = categoria_1 * 100 / contar
+porcentaje_2 = categoria_2 *100 / contar
+porcentaje_3 = categoria_3 * 100 / contar
+porcentaje_4 = catregoria_4 * 100 / contar
+print(
+  f"Total de animales:
+{contar}, categoria_1: {categoria_1}, categoria_2: {categoria_2},categoria_3: {categoria_3}, categoria_4: {categoria_4}"
+)
+print(f"categoria_1:{porcentaje_1}")
+print(f"categoria_2:{porcentaje_2}")
+print(f"categoria_3:{porcentaje_3}")
+print(f"categoria_4:{porcentaje_4}")
+
+
+
+
+#Password
+import string 
+def gfenerar_password():
+  password = ""
+for _ in range(8):
+  caracter  = input("Ingresa un digito para tu password: ")
+while caracter.insalnum() is False:
+  print("Por favor, introduce solo numeros o letras")
+    caracter = input("Intorude un digito para tu password: ")
+ password += caracter
+return password
+
+password_generado = generar_password()
+print(f"Password completo: {password_generado}")
+
+
