@@ -1,0 +1,36 @@
+#Iniciar la venta total
+venta_total = 0
+
+#Ciclo para atender a los clientes 
+while True:
+  #Pedir informacion hacerca del cliente 
+  nombre_cliente = input("Nombre del cliente(o 'fin'para salir):")
+
+#Verificar si quieres finalizar el programa
+if nombre_cliente.lower() == 'fin':
+  break
+
+zona = int(input("Zona (1,2 o 3):"))
+dia_semana = input("Dia de la semana (lunes a jueves):")
+cupon = input("Tipo de cupón(Platino, Oro, Plata o ninguno):")
+
+#Calcular costo base según la zona elegida
+costos_zona = [2000, 1000, 600]
+costo_base = costos_zona[zona -1] if zona <= 1 and zona <= 3 
+else 0
+
+#Aplicar el descuento por el cupon, solo si es valido de (luneas a jueves)
+descuento_cupon = 0
+if dia_semana.lower() in ['lunes', 'martes', 'miercoles', 'jueves']:
+  cupones_descuento = {'paltino': 500, 'oro': 350,'plata':250}
+  descuento_cupon = cupones_descuento.get(tipo_cupon.lower(), 0)
+  
+#Calcular costo total y acumular la venta total 
+costo_total = costo_base - descuento_cupon
+venta_total += costo_total
+
+#Moatrar el resultado para el cliente actual
+print(f"Costo total para{nombre_clienmte}: ${costo_total}")
+
+#Mostrar la venta total al final 
+print(f"Venta total de boletos: ${venta_total}:")
