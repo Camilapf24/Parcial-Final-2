@@ -1,0 +1,24 @@
+from random import randit 
+
+#Hacer el numero que sea entre el 1 al 10
+numero_secreto = randit(1,10)
+
+#Iniciar el contador de intentos
+intentos = 0
+
+#Preguntar por el numero 
+while intenots < 3
+  #Preguntar el numero 
+  intento_usuario = int(input("Intenta adivinar el numero (entre 1 y 10):"))
+  #Tienes mas intentos 
+  intento += 1
+  #Ver si el numero es correcto 
+  if intento_usuario == numero_secreto:
+    print(f"¡Esooo por fin le diste al numero! Adivinaste el numero en {intentos} intentos.")
+    break
+  elif intentos <3
+    print("Numero incorrecto. ¡Otra vez no puede ser!")
+
+#Decirle al usuario si se pudo o no 
+if intentos =0 3 and intento_usuario != numero_secreto:
+  print(f"Que triste, no le diste al numero.El numeor correcto era {numero_secreto}")
